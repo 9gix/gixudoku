@@ -11,6 +11,7 @@ import java.awt.event.ComponentListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import javax.swing.JApplet;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -20,7 +21,7 @@ import javax.swing.border.LineBorder;
 import javax.swing.border.TitledBorder;
 
 
-public class SudokuWindow {
+public class SudokuWindow extends JApplet {
 	private static String[] FILELIST = { "EASY", "NORMAL", "HARD", "TEST" };
 	private static String[] menuItem = {"Easy","Normal","Hard","Test","Undo", 
 		"Redo","Hide Flag","Give Up" };

@@ -1,6 +1,7 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Stack;
 
@@ -118,11 +119,12 @@ public class Sudoku {
 		redoHistory = new Stack<Move>();
 		completed = false;
 	}
-
+	
 	private String[] getQuestionAnswer(String file) {
 		ArrayList<String> questionList = new ArrayList<String>();
+		
 		try {
-			BufferedReader input = new BufferedReader(new FileReader(file));
+			BufferedReader input = new BufferedReader(new InputStreamReader(this.getClass().getResourceAsStream(file)));
 			String line;
 			while ((line = input.readLine()) != null) {
 				questionList.add(line);
